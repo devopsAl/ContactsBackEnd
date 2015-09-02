@@ -35,7 +35,7 @@ namespace ContactsBackEnd.DATA.Repositories
                 var paramStartRow = new SqlParameter
                 {
                     ParameterName = "@StartRow",
-                    Value = page * pageSize
+                    Value = (page * pageSize) - pageSize
                 };
                 cmd.Parameters.Add(paramStartRow);
 
